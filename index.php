@@ -23,7 +23,7 @@
 </head>
 <body>
 <div class="container">
-    <?php foreach($result : $value){
+    <?php foreach($result as $value){
         echo "<h1>$value[id] $value [name] $value[age]</h1>";
     }
     ?>
