@@ -5,10 +5,9 @@
     try {
         $dbh = new PDO($dsn, $user, $password);
 
-        $sql = "select * from rikako";
+        $sql = "select * from user";
         $result = $dbh -> query($sql);
 
-        echo "接続成功\n";
     } catch (PDOException $e) {
         echo "接続失敗: " . $e->getMessage() . "\n";
         exit();
