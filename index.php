@@ -6,7 +6,7 @@
         $dbh = new PDO($dsn, $user, $password);
 
         $sql = "select * from rikako";
-        $result = "";
+        $result = $dbh -> query($sql);
 
         echo "接続成功\n";
     } catch (PDOException $e) {
@@ -25,7 +25,7 @@
 <body>
 <div class="container">
     <?php foreach($result : $value){
-        echo "<h1>$value['id'] $value
+        echo "<h1>$value['id'] $value [name] $value[age]";
     }
     ?>
 </div>
