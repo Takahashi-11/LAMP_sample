@@ -24,7 +24,7 @@
 <body>
 <div class="container">
     <?php foreach($result : $value){
-        echo "<h1>$value['id'] $value [name] $value[age]";
+        echo "<h1>$value['id'] $value ['name'] $value['age']</h1>";
     }
     ?>
 </div>
