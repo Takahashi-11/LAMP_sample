@@ -7,6 +7,7 @@
 
         $sql = "select * from user";
         $result = $dbh->query($sql);
+        $del_list = $dbh->query($sql);
 
     } catch (PDOException $e) {
         echo "接続失敗: " . $e->getMessage() . "\n";
@@ -122,7 +123,31 @@
             </div>
 
             <div id="tab4" class="tab-pane">
-                sample4
+                <table class="table table-striped table-bordered mt-2">
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>-</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach($del_list as $value) {?>
+                                <tr>
+                                    <th><?php echo "$value[id]" ?></th>
+                                    <td><?php echo "$value[name]" ?></td>
+                                    <td><?php echo "$value[age]" ?></td>
+                                    <td>
+                                        <form action="./derete.php " method="$_GET">
+                                            <input type="text" class="d-none" name="id" value="<?php echo "$value[id]" ?>">
+                                            <button type="submit" class="btn btn-denger">delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                        </tbody>
+                    </table>
             </div>
 
         </div>        
