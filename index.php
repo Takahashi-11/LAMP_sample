@@ -84,11 +84,41 @@
             </div>
 
             <div id="tab2" class="tab-pane">
-                sample2
+            <form class="mt-5" action="./insert.php" method="POST">
+                    <div class="form-group">
+                        <label for="id">id</label>
+                        <input class="form-control" type="text" name="id" id="id" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">name</label>
+                        <input class="form-control" type="text" name="name" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="age">age</label>
+                        <input class="form-control" type="text" name="age" id="age" required>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Insert</button>
+                </form>
             </div>
 
             <div id="tab3" class="tab-pane">
-                sample3
+                <form class="mt-5" action="./update.php" method="POST">
+                        <div class="form-group">
+                            <label for="id">id</label>
+                            <input class="form-control" type="text" name="id" id="id" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="name">name</label>
+                            <input class="form-control" type="text" name="name" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">age</label>
+                            <input class="form-control" type="text" name="age" id="age" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Insert</button>
+                    </form>
             </div>
 
             <div id="tab4" class="tab-pane">
