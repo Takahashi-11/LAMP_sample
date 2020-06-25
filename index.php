@@ -141,7 +141,7 @@
                                     <td>
                                         <form action="./derete.php " method="$_GET">
                                             <input type="text" class="d-none" name="id" value="<?php echo "$value[id]" ?>">
-                                            <button type="submit" class="btn btn-denger">delete</button>
+                                            <button type="submit" class="btn btn-danger">delete</button>
                                         </form>
                                     </td>
                                 </tr>
